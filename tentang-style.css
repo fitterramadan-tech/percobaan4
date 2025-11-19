@@ -1,0 +1,45 @@
+/* Styling khusus halaman Tentang */
+
+.activity-list {
+    display: grid;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.activity {
+    padding: 18px;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    box-shadow: 0 4px 12px #00000020;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.activity:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px #00000030;
+}
+
+/* Pop-up lucu */
+.popup-activity {
+    position: fixed;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffffff;
+    padding: 15px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    opacity: 0;
+    transition: 0.4s ease;
+    border-left: 5px solid #4facfe;
+    font-size: 16px;
+}
+
+.popup-activity.show {
+    bottom: 40px;
+    opacity: 1;
+}
