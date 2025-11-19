@@ -121,3 +121,45 @@ footer {
     text-shadow: 0 2px 10px #00000020;
 }
 
+/* Tombol aktivitas */
+.activity-grid {
+    display: grid;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.activity-btn {
+    padding: 12px 16px;
+    background: #ffd86b;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.activity-btn:hover {
+    background: #ffca3a;
+}
+
+/* Pop-up lucu */
+.popup-activity {
+    position: fixed;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff6d6;
+    padding: 14px 20px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: 0.4s;
+    opacity: 0;
+    font-size: 16px;
+}
+
+.popup-activity.show {
+    bottom: 40px;
+    opacity: 1;
+}
+
+
