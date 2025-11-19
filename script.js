@@ -1,8 +1,8 @@
 function hello() {
-    alert("penasaran dengan kesehatanmu, Ayo!! cek kesehatan di healthy house 🥰🥰");
+    alert("Semoga Sehat Selalu🥰🥰");
 }
 function hello() {
-    alert("penasaran dengan kesehatanmu, Ayo!! cek kesehatan di healthy house 🥰🥰");
+    alert("Semoga Sehat Selalu 🥰🥰");
 }
 document.querySelector(".cek-nav").addEventListener("click", () => {
     alert("Menu Cek Kesehatan diklik.");
