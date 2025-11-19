@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tentang</title>
+    <title>Tentang Aktivitas</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="page">
@@ -14,36 +14,46 @@
     </header>
 
     <section class="container">
-        <h1>Tentang Aktivitas</h1>
-        <p class="subtitle">Informasi ringan tentang aktivitas dan tujuan halaman ini ✨</p>
+        <h1>Tentang Aktivitasmu</h1>
+        <p class="subtitle">Pilih salah satu tombol di bawah untuk memberitahu kabarmu ✨</p>
 
         <div class="card about-card">
-            <h2>🌟 Tujuan Halaman Ini</h2>
-            <p>
-                Halaman ini dibuat untuk memberikan informasi mengenai aktivitas, fitur,
-                dan fungsi utama dari website ini. Kamu dapat menyesuaikan isinya sesuai kebutuhanmu.
-            </p>
-        </div>
+            <h2>Bagaimana aktivitasmu hari ini?</h2>
 
-        <div class="card about-card">
-            <h2>📌 Apa Saja di Dalamnya?</h2>
-            <ul class="list">
-                <li>Menjelaskan aktivitas pengguna atau sistem</li>
-                <li>Memberikan gambaran fitur secara singkat</li>
-                <li>Menambah kepercayaan dan kenyamanan pengguna</li>
-                <li>Dibuat dengan desain ceria dan rapi</li>
-            </ul>
-        </div>
-
-        <div class="card about-card">
-            <h2>💡 Catatan</h2>
-            <p>
-                Kamu bisa mengubah teks, ikon, warna, atau menambahkan informasi tambahan kapan saja!
-                Halaman ini fleksibel dan mudah diedit.
-            </p>
+            <div class="activity-grid">
+                <button class="activity-btn" data-msg="Wah semangat sekali kamu hari ini! 💪😄">Sangat Aktif ⚡</button>
+                <button class="activity-btn" data-msg="Mantap! Aktivitasmu berjalan lancar ya ✨">Cukup Aktif 🙂</button>
+                <button class="activity-btn" data-msg="Istirahat sebentar tidak apa-apa kok! ☕😊">Biasa Saja 😌</button>
+                <button class="activity-btn" data-msg="Wah, sepertinya capek ya... jangan lupa istirahat 😴💤">Lelah 😴</button>
+                <button class="activity-btn" data-msg="Semoga cepat pulih ya! 🌼">Kurang Fit 🤒</button>
+            </div>
         </div>
     </section>
 
-    <script src="transition.js"></script>
+    <script>
+        // POP-UP lucu seperti di halaman cek kesehatan
+        document.querySelectorAll('.activity-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                let msg = btn.getAttribute('data-msg');
+
+                // Pop-up sederhana
+                let box = document.createElement('div');
+                box.className = 'popup-activity';
+                box.innerText = msg;
+
+                document.body.appendChild(box);
+
+                setTimeout(() => {
+                    box.classList.add('show');
+                }, 10);
+
+                setTimeout(() => {
+                    box.classList.remove('show');
+                    setTimeout(() => box.remove(), 300);
+                }, 2000);
+            });
+        });
+    </script>
+
 </body>
 </html>
