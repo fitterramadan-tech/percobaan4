@@ -1,5 +1,5 @@
 function hello() {
-    alert("penasaran dengan kesehatanmu, Ayo!! cek kesehatan di healthy house");
+    alert("penasaran dengan kesehatanmu, Ayo!! cek kesehatan di healthy house 🥰🥰");
 }
 function hello() {
     alert("penasaran dengan kesehatanmu, Ayo!! cek kesehatan di healthy house 🥰🥰");
