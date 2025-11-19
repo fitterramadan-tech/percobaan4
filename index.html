@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthyLife App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= LOGIN PAGE ================= -->
+<div id="login-page" class="page active">
+    <h1 class="title">Login</h1>
+    <div class="card form-card">
+        <input type="text" id="login-username" placeholder="Username">
+        <input type="password" id="login-password" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <p class="switch-text">Belum punya akun? <span onclick="showPage('register-page')">Register</span></p>
+        <p id="login-error" class="error"></p>
+    </div>
+</div>
+
+<!-- ================= REGISTER PAGE ================= -->
+<div id="register-page" class="page">
+    <h1 class="title">Register</h1>
+    <div class="card form-card">
+        <input type="text" id="reg-username" placeholder="Username">
+        <input type="password" id="reg-password" placeholder="Password">
+        <button onclick="register()">Register</button>
+        <p class="switch-text">Sudah punya akun? <span onclick="showPage('login-page')">Login</span></p>
+        <p id="register-error" class="error"></p>
+    </div>
+</div>
+
+
+<!-- ================= DASHBOARD / HOME ================= -->
+<div id="home-page" class="page">
+    <!-- HAMBURGER MENU -->
+    <div class="hamburger" onclick="toggleMenu()">
+        ☰
+    </div>
+
+    <!-- SIDEBAR -->
+    <div id="sidebar" class="sidebar">
+        <a onclick="showPage('home-page')">Beranda</a>
+        <a onclick="showPage('bmi-page')">Cek Tubuh Ideal</a>
+        <a onclick="showPage('cuaca-page')">Rekomendasi Aktivitas</a>
+        <a onclick="showPage('profile-page')">Profil</a>
+        <a onclick="logout()">Logout</a>
+    </div>
+
+    <h1 class="title-center">Selamat Datang di HealthyLife!</h1>
+
+    <div class="home-container">
+        <img id="mascot" src="https://i.imgur.com/7yUVE3a.png" class="mascot" alt="mascot">
+        <p class="home-desc">Website ini membantu kamu memantau kesehatan, mengecek tubuh ideal, dan mencari aktivitas yang cocok berdasarkan cuaca & musim!</p>
+    </div>
+
+    <!-- CHAT POPUP -->
+    <div id="chat-popup" class="chat-popup">
+        <p>Hai! Mau cek kesehatan hari ini? Klik menu di kiri ya! 😊</p>
+    </div>
+</div>
+
+
+<!-- ================= BMI PAGE ================= -->
+<div id="bmi-page" class="page">
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <h1 class="title-center">Cek Tubuh Ideal (BMI)</h1>
+
+    <div class="card">
+        <input type="number" id="bmi-umur" placeholder="Umur">
+        <select id="bmi-gender">
+            <option value="">Pilih Jenis Kelamin</option>
+            <option value="pria">Pria</option>
+            <option value="wanita">Wanita</option>
+        </select>
+        <input type="number" id="bmi-tinggi" placeholder="Tinggi (cm)">
+        <input type="number" id="bmi-berat" placeholder="Berat (kg)">
+
+        <label>Keluhan:</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox" value="Cepat lelah"> Cepat lelah</label>
+            <label><input type="checkbox" value="Mood berubah"> Mood berubah</label>
+            <label><input type="checkbox" value="Sulit fokus"> Sulit fokus</label>
+            <label><input type="checkbox" value="Sering lapar"> Sering lapar</label>
+        </div>
+
+        <button onclick="hitungBMI()">Hitung BMI</button>
+    </div>
+
+    <div id="bmi-result" class="card result"></div>
+</div>
+
+
+<!-- ================= CUACA PAGE ================= -->
+<div id="cuaca-page" class="page">
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <h1 class="title-center">Rekomendasi Aktivitas Berdasarkan Cuaca</h1>
+
+    <div class="card">
+        <select id="cuaca">
+            <option value="">Pilih Cuaca</option>
+            <option value="cerah">Cerah</option>
+            <option value="mendung">Mendung</option>
+            <option value="hujan">Hujan</option>
+            <option value="panas">Panas</option>
+            <option value="badai">Badai</option>
+        </select>
+
+        <select id="musim">
+            <option value="">Pilih Musim</option>
+            <option value="kemarau">Kemarau</option>
+            <option value="hujan">Hujan</option>
+        </select>
+
+        <select id="waktu">
+            <option value="">Waktu</option>
+            <option value="pagi">Pagi</option>
+            <option value="siang">Siang</option>
+            <option value="malam">Malam</option>
+            <option value="tengah malam">Tengah Malam</option>
+        </select>
+
+        <button onclick="rekomendasiAktivitas()">Lihat Rekomendasi</button>
+    </div>
+
+    <div id="cuaca-result" class="card result"></div>
+</div>
+
+
+<!-- ================= PROFILE PAGE ================= -->
+<div id="profile-page" class="page">
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <h1 class="title-center">Profil Pengguna</h1>
+
+    <div class="card">
+        <p><b>Username:</b> <span id="profile-username"></span></p>
+        <button onclick="logout()">Logout</button>
+    </div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
