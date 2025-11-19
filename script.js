@@ -1,5 +1,5 @@
 function hello() {
-    alert("Halo! Script JS berjalan dengan benar.");
+    alert("penasaran dengan kesehatanmu, Ayo!! cek kesehatan di healthy house &#128512;");
 }
 function hello() {
     alert("penasaran dengan kesehatanmu, Ayo!! cek kesehatan di healthy house &#128512;");
