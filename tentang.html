@@ -1,59 +1,28 @@
-<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tentang Aktivitas</title>
-    <link rel="stylesheet" href="style.css">
+    <title>keseharian</title>
+    <link rel="stylesheet" href="cek-style.css">
 </head>
 <body class="page">
 
     <header class="top-bar">
-        <h2>Tentang</h2>
+        <h2>keseharian</h2>
         <a href="index.html" class="back-btn">← Kembali</a>
     </header>
 
     <section class="container">
-        <h1>Tentang Aktivitasmu</h1>
-        <p class="subtitle">Pilih salah satu tombol di bawah untuk memberitahu kabarmu ✨</p>
+        <h1>Bagaimana kabarmu hari ini</h1>
+        <p>Pilih salah satu untuk memilhat kondisimu 😊</p>
 
-        <div class="card about-card">
-            <h2>Bagaimana aktivitasmu hari ini?</h2>
-
-            <div class="activity-grid">
-                <button class="activity-btn" data-msg="Wah semangat sekali kamu hari ini! 💪😄">Sangat Aktif ⚡</button>
-                <button class="activity-btn" data-msg="Mantap! Aktivitasmu berjalan lancar ya ✨">Cukup Aktif 🙂</button>
-                <button class="activity-btn" data-msg="Istirahat sebentar tidak apa-apa kok! ☕😊">Biasa Saja 😌</button>
-                <button class="activity-btn" data-msg="Wah, sepertinya capek ya... jangan lupa istirahat 😴💤">Lelah 😴</button>
-                <button class="activity-btn" data-msg="Semoga cepat pulih ya! 🌼">Kurang Fit 🤒</button>
-            </div>
+        <div class="mood-list">
+            <div class="mood happy" id="mood-happy">Sangat baik 😜</div>
+            <div class="mood normal" id="mood-normal">normal 😐</div>
+            <div class="mood tired" id="mood-tired">kurang baik 🤧</div>
+            <div class="mood sick" id="mood-sick">sakit 🤕</div>
         </div>
     </section>
 
-    <script>
-        // POP-UP lucu seperti di halaman cek kesehatan
-        document.querySelectorAll('.activity-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                let msg = btn.getAttribute('data-msg');
-
-                // Pop-up sederhana
-                let box = document.createElement('div');
-                box.className = 'popup-activity';
-                box.innerText = msg;
-
-                document.body.appendChild(box);
-
-                setTimeout(() => {
-                    box.classList.add('show');
-                }, 10);
-
-                setTimeout(() => {
-                    box.classList.remove('show');
-                    setTimeout(() => box.remove(), 300);
-                }, 2000);
-            });
-        });
-    </script>
 
 </body>
 </html>
