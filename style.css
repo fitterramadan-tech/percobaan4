@@ -39,3 +39,17 @@ footer {
     background: #ddd;
     margin-top: 40px;
 }
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+}
