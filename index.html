@@ -3,158 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HealthyCute! 🌈🐣</title>
+    <title>Sehat Ceria</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- BACKGROUND DEKORASI -->
-<div class="cloud c1"></div>
-<div class="cloud c2"></div>
-<div class="cloud c3"></div>
-<div class="stars"></div>
-
 <!-- ================= LOGIN PAGE ================= -->
-<div id="login-page" class="page active">
-    <h1 class="title">🌟 Login HealthyCute! 🌟</h1>
-    <div class="card form-card bounce">
-        <img src="https://i.imgur.com/0y8Ftya.png" class="mini-icon">
-        <input type="text" id="login-username" placeholder="Username imutmu~">
-        <input type="password" id="login-password" placeholder="Password rahasia 💗">
-        <button class="btn-jelly" onclick="login()">Masuk 🐾</button>
-        <p class="switch-text">Belum punya akun? <span onclick="showPage('register-page')">Daftar dulu 💕</span></p>
-        <p id="login-error" class="error"></p>
+<div id="loginPage" class="page active">
+    <div class="auth-container">
+        <h1>Login</h1>
+        <input type="text" id="loginUser" placeholder="Username">
+        <input type="password" id="loginPass" placeholder="Password">
+        <p id="loginError" class="error"></p>
+        <button onclick="login()">Masuk</button>
+        <p>Belum punya akun? <span class="link" onclick="showPage('registerPage')">Register</span></p>
     </div>
 </div>
 
 <!-- ================= REGISTER PAGE ================= -->
-<div id="register-page" class="page">
-    <h1 class="title">🌈 Register HealthyCute! 🌈</h1>
-    <div class="card form-card bounce">
-        <img src="https://i.imgur.com/XFd9M1p.png" class="mini-icon">
-        <input type="text" id="reg-username" placeholder="Username lucu">
-        <input type="password" id="reg-password" placeholder="Password rahasia">
-        <button class="btn-jelly" onclick="register()">Daftar 🐣</button>
-        <p class="switch-text">Sudah punya akun? <span onclick="showPage('login-page')">Login 💗</span></p>
-        <p id="register-error" class="error"></p>
+<div id="registerPage" class="page">
+    <div class="auth-container">
+        <h1>Register</h1>
+        <input type="text" id="regUser" placeholder="Username">
+        <input type="password" id="regPass" placeholder="Password">
+        <p id="regError" class="error"></p>
+        <button onclick="register()">Daftar</button>
+        <p>Sudah punya akun? <span class="link" onclick="showPage('loginPage')">Login</span></p>
     </div>
 </div>
 
-<!-- ================= HOME PAGE ================= -->
-<div id="home-page" class="page">
+<!-- ================= MAIN APP PAGE ================= -->
+<div id="appPage" class="page">
 
-    <div class="hamburger" onclick="toggleMenu()">🍔</div>
+    <!-- HAMBURGER -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
 
+    <!-- SIDEBAR -->
     <div id="sidebar" class="sidebar">
-        <div class="side-title">🎀 Menu Cute 🎀</div>
-        <a onclick="showPage('home-page')">🏠 Beranda</a>
-        <a onclick="showPage('bmi-page')">⚖ Cek Tubuh Ideal</a>
-        <a onclick="showPage('cuaca-page')">🌤 Aktivitas Cuaca</a>
-        <a onclick="showPage('profile-page')">🐱 Profil</a>
-        <a onclick="logout()">🚪 Logout</a>
+        <h2>Menu</h2>
+        <ul>
+            <li onclick="goHome()">🏠 Beranda</li>
+            <li onclick="showBMI()">⚖️ Cek BMI</li>
+            <li onclick="showAktivitas()">🌤️ Rekomendasi Aktivitas</li>
+            <li onclick="logout()">🚪 Logout</li>
+        </ul>
     </div>
 
-    <h1 class="title-center">🎉 Selamat Datang di HealthyCute! 🎉</h1>
+    <!-- ================= HOME ================= -->
+    <div id="homePage" class="content active">
+        <h1 class="title">Selamat Datang!</h1>
 
-    <div class="home-container">
-        <img id="mascot" src="https://i.imgur.com/7yUVE3a.png" class="mascot">
-        <p class="home-desc">
-            Website kesehatan super imut, penuh warna, dan ramah untuk siapa saja!  
-            Klik mascot untuk ngobrol! 💬🐰
-        </p>
-    </div>
+        <div class="home-box">
+            <img id="kartun" src="https://i.imgur.com/4AiXzf8.png" class="kartun" alt="kartun lucu">
 
-    <div id="chat-popup" class="chat-popup">
-        🌟 Hai hai! Mau cek kesehatan lucumu hari ini? 🌟
-    </div>
+            <div id="chatPop" class="chat-pop">Hai! Mau cek kesehatan hari ini? 😊</div>
 
-</div>
-
-
-<!-- ================= BMI PAGE ================= -->
-<div id="bmi-page" class="page">
-    <div class="hamburger" onclick="toggleMenu()">🍔</div>
-
-    <h1 class="title-center">⚖ Cek Tubuh Ideal Cute!</h1>
-
-    <div class="card bubble">
-        <img src="https://i.imgur.com/0y8Ftya.png" class="mini-icon">
-        <input type="number" id="bmi-umur" placeholder="Umur (dalam tahun)">
-        <select id="bmi-gender">
-            <option value="">Pilih Jenis Kelamin</option>
-            <option value="pria">Pria 💪</option>
-            <option value="wanita">Wanita 🌸</option>
-        </select>
-        <input type="number" id="bmi-tinggi" placeholder="Tinggi (cm)">
-        <input type="number" id="bmi-berat" placeholder="Berat (kg)">
-
-        <label>Keluhan kecilmu 💭:</label>
-        <div class="checkbox-group">
-            <label><input type="checkbox" value="Cepat lelah"> 💤 Cepat lelah</label>
-            <label><input type="checkbox" value="Mood berubah"> 😢 Mood berubah</label>
-            <label><input type="checkbox" value="Sulit fokus"> 🤯 Sulit fokus</label>
-            <label><input type="checkbox" value="Sering lapar"> 🍪 Sering lapar</label>
+            <p class="subtitle">
+                Website ini membantu kamu mengecek kesehatan tubuh, menghitung BMI, 
+                dan mendapatkan rekomendasi aktivitas sesuai cuaca.
+            </p>
         </div>
-
-        <button class="btn-jelly" onclick="hitungBMI()">Hitung Yuk! 💗</button>
     </div>
 
-    <div id="bmi-result" class="card result bubble"></div>
-</div>
+    <!-- ================= BMI CHECK PAGE ================= -->
+    <div id="bmiPage" class="content">
+        <h2>⚖️ Cek Tubuh Ideal</h2>
 
+        <div class="card">
+            <label>Umur:</label>
+            <input type="number" id="bmiUmur">
 
+            <label>Jenis Kelamin:</label>
+            <select id="bmiGender">
+                <option value="l">Laki-laki</option>
+                <option value="p">Perempuan</option>
+            </select>
 
-<!-- ================= CUACA PAGE ================= -->
-<div id="cuaca-page" class="page">
-    <div class="hamburger" onclick="toggleMenu()">🍔</div>
+            <label>Tinggi Badan (cm):</label>
+            <input type="number" id="bmiTinggi">
 
-    <h1 class="title-center">🌤 Rekomendasi Aktivitas Cute!</h1>
+            <label>Berat Badan (kg):</label>
+            <input type="number" id="bmiBerat">
 
-    <div class="card bubble">
-        <img src="https://i.imgur.com/Kt6ry5R.png" class="mini-icon">
+            <label>Kondisi Tambahan:</label>
+            <select id="bmiKondisi">
+                <option value="">Pilih...</option>
+                <option>Cepat lelah</option>
+                <option>Cepat berubah mood</option>
+                <option>Sulit fokus</option>
+                <option>Kurang nafsu makan</option>
+                <option>Sering pusing</option>
+            </select>
 
-        <select id="cuaca">
-            <option value="">Pilih Cuaca</option>
-            <option value="cerah">Cerah ☀</option>
-            <option value="mendung">Mendung ☁</option>
-            <option value="hujan">Hujan 🌧</option>
-            <option value="panas">Panas 🔥</option>
-            <option value="badai">Badai ⛈</option>
-        </select>
+            <button onclick="hitungBMI()">Hitung BMI</button>
 
-        <select id="musim">
-            <option value="">Pilih Musim</option>
-            <option value="kemarau">Kemarau 🔆</option>
-            <option value="hujan">Hujan 🌧</option>
-        </select>
-
-        <select id="waktu">
-            <option value="">Waktu</option>
-            <option value="pagi">Pagi 🌅</option>
-            <option value="siang">Siang 🌤</option>
-            <option value="malam">Malam 🌙</option>
-            <option value="tengah malam">Tengah Malam 🌌</option>
-        </select>
-
-        <button class="btn-jelly" onclick="rekomendasiAktivitas()">Lihat Rekomendasi 🎀</button>
+            <div id="bmiResult" class="result"></div>
+        </div>
     </div>
 
-    <div id="cuaca-result" class="card result bubble"></div>
-</div>
+    <!-- ================= AKTIVITAS PAGE ================= -->
+    <div id="aktivitasPage" class="content">
+        <h2>🌤️ Rekomendasi Aktivitas</h2>
 
+        <div class="card">
+            <label>Cuaca:</label>
+            <select id="cuaca">
+                <option>cerah</option>
+                <option>mendung</option>
+                <option>hujan</option>
+                <option>panas</option>
+                <option>badai</option>
+            </select>
 
-<!-- ================= PROFILE PAGE ================= -->
-<div id="profile-page" class="page">
-    <div class="hamburger" onclick="toggleMenu()">🍔</div>
+            <label>Musim:</label>
+            <select id="musim">
+                <option>kemarau</option>
+                <option>hujan</option>
+            </select>
 
-    <h1 class="title-center">🐱 Profil Cute!</h1>
+            <label>Waktu:</label>
+            <select id="waktu">
+                <option>pagi</option>
+                <option>siang</option>
+                <option>malam</option>
+                <option>tengah malam</option>
+            </select>
 
-    <div class="card bubble">
-        <img src="https://i.imgur.com/pQ34y3L.png" class="mini-icon">
-        <p><b>Username lucu:</b> <span id="profile-username"></span></p>
+            <button onclick="cekAktivitas()">Cek Aktivitas</button>
 
-        <button class="btn-jelly" onclick="logout()">Keluar 💔</button>
+            <div id="aktivitasResult" class="result"></div>
+        </div>
     </div>
+
 </div>
 
 <script src="script.js"></script>
