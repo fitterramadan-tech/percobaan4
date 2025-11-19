@@ -1,16 +1,17 @@
-// Efek keluar sebelum pindah halaman
 document.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", function (e) {
         const href = this.getAttribute("href");
 
-        // Jangan animasi anchor (#)
         if (!href || href.startsWith("#")) return;
 
         e.preventDefault();
-        document.body.classList.add("fade-out");
+
+        // Tambahkan animasi slide keluar
+        document.body.classList.add("slide-out");
 
         setTimeout(() => {
-            window.location = href;
-        }, 400); // waktu fade-out harus sama dengan CSS
+            window.location.href = href;
+        }, 500); // waktu harus sama dengan animasi CSS
     });
 });
+
