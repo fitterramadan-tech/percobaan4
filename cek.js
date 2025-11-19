@@ -80,3 +80,20 @@ if (document.title.includes("Hasil")) {
         </div>
     `;
 }
+
+// ===== Respon Mood Lucu =====
+document.getElementById("mood-happy").onclick = function () {
+    alert("Wah! Kamu sedang ceria 😊✨ Jaga mood baiknya ya!");
+};
+
+document.getElementById("mood-normal").onclick = function () {
+    alert("Oke! Semoga harimu tetap menyenangkan 😐👍");
+};
+
+document.getElementById("mood-tired").onclick = function () {
+    alert("Lagi capek ya? 😴💤 Jangan lupa istirahat cukup!");
+};
+
+document.getElementById("mood-sick").onclick = function () {
+    alert("Aduh, kamu kurang sehat 🤒💦 Coba minum air hangat dan istirahat ya!");
+};
