@@ -39,3 +39,9 @@ footer {
     background: #ddd;
     margin-top: 40px;
 }
+
+nav a.cek-nav {
+    color: yellow;
+    font-weight: bold;
+}
+
