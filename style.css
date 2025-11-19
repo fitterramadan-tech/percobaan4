@@ -36,6 +36,30 @@ button {
     cursor: pointer;
 }
 
+/* Animasi saat halaman masuk */
+.fade {
+    opacity: 0;
+    animation: fadeIn 0.6s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animasi saat keluar */
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+
 /* Footer */
 footer {
     text-align: center;
