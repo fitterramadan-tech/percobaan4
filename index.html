@@ -1,142 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sehat Ceria</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Beranda — Situs Simple</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="container">
+    <header>
+      <div class="brand">SitusKu</div>
+      <nav>
+        <a href="#">Beranda</a>
+        <a href="#about">Tentang</a>
+        <a href="#fitur">Fitur</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+    </header>
 
-<!-- ================= LOGIN PAGE ================= -->
-<div id="loginPage" class="page active">
-    <div class="auth-container">
-        <h1>Login</h1>
-        <input type="text" id="loginUser" placeholder="Username">
-        <input type="password" id="loginPass" placeholder="Password">
-        <p id="loginError" class="error"></p>
-        <button onclick="login()">Masuk</button>
-        <p>Belum punya akun? <span class="link" onclick="showPage('registerPage')">Register</span></p>
-    </div>
-</div>
+    <main>
+      <section class="hero">
+        <div>
+          <h1>Selamat datang di SitusKu</h1>
+          <p>Ini adalah contoh beranda sederhana yang dibuat dengan HTML, CSS, dan sedikit JavaScript.</p>
+          <a class="cta" href="#kontak">Hubungi Kami</a>
 
-<!-- ================= REGISTER PAGE ================= -->
-<div id="registerPage" class="page">
-    <div class="auth-container">
-        <h1>Register</h1>
-        <input type="text" id="regUser" placeholder="Username">
-        <input type="password" id="regPass" placeholder="Password">
-        <p id="regError" class="error"></p>
-        <button onclick="register()">Daftar</button>
-        <p>Sudah punya akun? <span class="link" onclick="showPage('loginPage')">Login</span></p>
-    </div>
-</div>
-
-<!-- ================= MAIN APP PAGE ================= -->
-<div id="appPage" class="page">
-
-    <!-- HAMBURGER -->
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-
-    <!-- SIDEBAR -->
-    <div id="sidebar" class="sidebar">
-        <h2>Menu</h2>
-        <ul>
-            <li onclick="goHome()">🏠 Beranda</li>
-            <li onclick="showBMI()">⚖️ Cek BMI</li>
-            <li onclick="showAktivitas()">🌤️ Rekomendasi Aktivitas</li>
-            <li onclick="logout()">🚪 Logout</li>
-        </ul>
-    </div>
-
-    <!-- ================= HOME ================= -->
-    <div id="homePage" class="content active">
-        <h1 class="title">Selamat Datang!</h1>
-
-        <div class="home-box">
-            <img id="kartun" src="https://i.imgur.com/4AiXzf8.png" class="kartun" alt="kartun lucu">
-
-            <div id="chatPop" class="chat-pop">Hai! Mau cek kesehatan hari ini? 😊</div>
-
-            <p class="subtitle">
-                Website ini membantu kamu mengecek kesehatan tubuh, menghitung BMI, 
-                dan mendapatkan rekomendasi aktivitas sesuai cuaca.
-            </p>
+          <div class="features" id="fitur">
+            <div class="card">
+              <h3>Desain Responsif</h3>
+              <p class="muted">Tampilan menyesuaikan ukuran layar.</p>
+            </div>
+            <div class="card">
+              <h3>Mudah Dikustom</h3>
+              <p class="muted">Kode sederhana dan mudah diedit.</p>
+            </div>
+            <div class="card">
+              <h3>Ringan</h3>
+              <p class="muted">Hanya HTML/CSS + sedikit JS.</p>
+            </div>
+          </div>
         </div>
-    </div>
 
-    <!-- ================= BMI CHECK PAGE ================= -->
-    <div id="bmiPage" class="content">
-        <h2>⚖️ Cek Tubuh Ideal</h2>
+        <aside>
+          <div class="card">
+            <h3 id="about">Tentang Kami</h3>
+            <p class="muted">Kami membuat prototipe situs sederhana.</p>
+            <hr />
+            <h4>Kontak singkat</h4>
+            <form id="contact" class="contact-form">
+              <input type="text" id="name" placeholder="Nama" required />
+              <input type="email" id="email" placeholder="Email" required />
+              <textarea id="message" rows="4" placeholder="Pesan" required></textarea>
+              <button type="submit">Kirim</button>
+            </form>
+            <p id="msg" class="muted"></p>
+          </div>
+        </aside>
+      </section>
+    </main>
 
-        <div class="card">
-            <label>Umur:</label>
-            <input type="number" id="bmiUmur">
+    <footer>
+      <small>© 2025 SitusKu. Semua hak dilindungi.</small>
+    </footer>
+  </div>
 
-            <label>Jenis Kelamin:</label>
-            <select id="bmiGender">
-                <option value="l">Laki-laki</option>
-                <option value="p">Perempuan</option>
-            </select>
-
-            <label>Tinggi Badan (cm):</label>
-            <input type="number" id="bmiTinggi">
-
-            <label>Berat Badan (kg):</label>
-            <input type="number" id="bmiBerat">
-
-            <label>Kondisi Tambahan:</label>
-            <select id="bmiKondisi">
-                <option value="">Pilih...</option>
-                <option>Cepat lelah</option>
-                <option>Cepat berubah mood</option>
-                <option>Sulit fokus</option>
-                <option>Kurang nafsu makan</option>
-                <option>Sering pusing</option>
-            </select>
-
-            <button onclick="hitungBMI()">Hitung BMI</button>
-
-            <div id="bmiResult" class="result"></div>
-        </div>
-    </div>
-
-    <!-- ================= AKTIVITAS PAGE ================= -->
-    <div id="aktivitasPage" class="content">
-        <h2>🌤️ Rekomendasi Aktivitas</h2>
-
-        <div class="card">
-            <label>Cuaca:</label>
-            <select id="cuaca">
-                <option>cerah</option>
-                <option>mendung</option>
-                <option>hujan</option>
-                <option>panas</option>
-                <option>badai</option>
-            </select>
-
-            <label>Musim:</label>
-            <select id="musim">
-                <option>kemarau</option>
-                <option>hujan</option>
-            </select>
-
-            <label>Waktu:</label>
-            <select id="waktu">
-                <option>pagi</option>
-                <option>siang</option>
-                <option>malam</option>
-                <option>tengah malam</option>
-            </select>
-
-            <button onclick="cekAktivitas()">Cek Aktivitas</button>
-
-            <div id="aktivitasResult" class="result"></div>
-        </div>
-    </div>
-
-</div>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
