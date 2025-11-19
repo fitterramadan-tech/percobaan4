@@ -1,69 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Beranda — Situs Simple</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda Simple</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
+
     <header>
-      <div class="brand">SitusKu</div>
-      <nav>
-        <a href="#">Beranda</a>
-        <a href="#about">Tentang</a>
-        <a href="#fitur">Fitur</a>
-        <a href="#kontak">Kontak</a>
-      </nav>
+        <h1>Selamat Datang di Website Saya</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Tentang</a>
+            <a href="#">Kontak</a>
+        </nav>
     </header>
 
-    <main>
-      <section class="hero">
-        <div>
-          <h1>Selamat datang di SitusKu</h1>
-          <p>Ini adalah contoh beranda sederhana yang dibuat dengan HTML, CSS, dan sedikit JavaScript.</p>
-          <a class="cta" href="#kontak">Hubungi Kami</a>
-
-          <div class="features" id="fitur">
-            <div class="card">
-              <h3>Desain Responsif</h3>
-              <p class="muted">Tampilan menyesuaikan ukuran layar.</p>
-            </div>
-            <div class="card">
-              <h3>Mudah Dikustom</h3>
-              <p class="muted">Kode sederhana dan mudah diedit.</p>
-            </div>
-            <div class="card">
-              <h3>Ringan</h3>
-              <p class="muted">Hanya HTML/CSS + sedikit JS.</p>
-            </div>
-          </div>
-        </div>
-
-        <aside>
-          <div class="card">
-            <h3 id="about">Tentang Kami</h3>
-            <p class="muted">Kami membuat prototipe situs sederhana.</p>
-            <hr />
-            <h4>Kontak singkat</h4>
-            <form id="contact" class="contact-form">
-              <input type="text" id="name" placeholder="Nama" required />
-              <input type="email" id="email" placeholder="Email" required />
-              <textarea id="message" rows="4" placeholder="Pesan" required></textarea>
-              <button type="submit">Kirim</button>
-            </form>
-            <p id="msg" class="muted"></p>
-          </div>
-        </aside>
-      </section>
-    </main>
+    <section class="hero">
+        <h2>Ini adalah halaman beranda sederhana</h2>
+        <p>Silakan menyesuaikan desain sesuai keinginan.</p>
+        <button onclick="hello()">Klik Saya</button>
+    </section>
 
     <footer>
-      <small>© 2025 SitusKu. Semua hak dilindungi.</small>
+        <p>© 2025 Website Sederhana</p>
     </footer>
-  </div>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
