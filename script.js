@@ -5,4 +5,6 @@ function hello() {
     alert("Halo! Website modern siap digunakan.");
 }
 
-document.querySelector(".cek-nav").addEventListener("click");
+document.querySelector(".cek-nav").addEventListener("click", () => {
+    alert("Menu Cek Kesehatan diklik.");
+});
