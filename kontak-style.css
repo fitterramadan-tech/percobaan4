@@ -1,1 +1,30 @@
+/* Warna dasar ceria */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(to bottom, #89cff0, #f0faff);
+    color: #333;
+}
 
+/* Header di atas */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffffaa;
+    backdrop-filter: blur(10px);
+    padding: 15px 20px;
+    box-shadow: 0 3px 10px #00000010;
+}
+
+.top-bar h2 {
+    font-size: 20px;
+}
+
+.back-btn {
+    text-decoration: none;
+    color: #0077ff;
+    font-weight: 600;
+    font-size: 14px;
+}
