@@ -30,10 +30,28 @@ document.getElementById("cek-aktivitas").onclick = function () {
     // AI logika sederhana
     if (waktu === "pagi" && cuaca === "cerah") {
         rekomendasi = "Jalan kaki atau Jogging santai dan olahraga fisik ringan untuk pembentukkan otot yang bagus 🚶‍♂️✨";
+    } else if (waktu === "pagi" && cuaca === "panas") {
+        rekomendasi = "Mana ada cuaca panas di pagi hari 🥵🥵";
+    } else if (waktu === "pagi" && cuaca === "mendung") {
+        rekomendasi = "Baca buku sambil minum kopi atau meditasi selama beberapa menit📖😌";
+    } else if (waktu === "pagi" && cuaca === "hujan") {
+        rekomendasi = "Olahraga indoor yang ringan atau menikmati suasana hujan dengan minum kopi/teh hangat☕💧";
+    } else if (waktu === "siang" && cuaca === "cerah") {
+        rekomendasi = "Piknik, jalan santai atau olahraga outdoor yang cukup 🥵💧";
     } else if (waktu === "siang" && cuaca === "panas") {
-        rekomendasi = "Perbanyak minum air dan hindari aktivitas berat, serta kurangi kontak matahari secara langsung 🥵💧";
+        rekomendasi = "Perbanyak minum air dan hindari aktivitas berat atau berenang  🥵💧";
+    } else if (waktu === "siang" && cuaca === "mendung") {
+        rekomendasi = " Bekerja atau belajar, mendengarkan podcast atau kegiatan kreatif lainnya didalam rumah ";
+    } else if (waktu === "siang" && cuaca === "hujan") {
+        rekomendasi = "Menonton film, memasak makanan sehat, atau membersihkan rumah 💧💧";
+    } else if (waktu === "sore" && cuaca === "cerah") {
+        rekomendasi = "Jalan santai, bersepeda, aktivitas olahraga ringan outdoor👍😊";
+    } else if (waktu === "sore" && cuaca === "panas") {
+        rekomendasi = "Aktivitas indoor ringan, minum es, atau istirahat yang cukup👍🍹";
     } else if (waktu === "sore" && cuaca === "mendung") {
         rekomendasi = "lakukan peregangan ringan di dalam rumah atau istirahat secukupnya serta memakai pakaian hangat agar tubuh tetap stabil ☕📖";
+    } else if (waktu === "sore" && cuaca === "hujan") {
+        rekomendasi = "Minum-minuman hangat, ☕📖";
     } else if (waktu === "malam" && cuaca === "cerah") {
         rekomendasi = "Waktu yang pas buat istirahat atau menonton film favoritmu 🎬🌙";
     } else if (cuaca === "hujan") {
