@@ -29,11 +29,11 @@ document.getElementById("cek-aktivitas").onclick = function () {
 
     // AI logika sederhana
     if (waktu === "pagi" && cuaca === "cerah") {
-        rekomendasi = "Waktu yang pas buat olahraga ringan atau jalan jalan 🚶‍♂️✨";
+        rekomendasi = "Jalan kaki atau Jogging santai dan olahraga fisik ringan untuk pembentukkan otot yang bagus 🚶‍♂️✨";
     } else if (waktu === "siang" && cuaca === "panas") {
-        rekomendasi = "Lebih baik banyak minum air dan hindari aktivitas berat 🥵💧";
+        rekomendasi = "Perbanyak minum air dan hindari aktivitas berat, serta kurangi kontak matahari secara langsung 🥵💧";
     } else if (waktu === "sore" && cuaca === "mendung") {
-        rekomendasi = "Cocok buat aktivitas santai seperti baca atau ngopi ☕📖";
+        rekomendasi = "lakukan peregangan ringan di dalam rumah atau istirahat secukupnya serta memakai pakaian hangat agar tubuh tetap stabil ☕📖";
     } else if (waktu === "malam" && cuaca === "cerah") {
         rekomendasi = "Waktu yang pas buat istirahat atau menonton film favoritmu 🎬🌙";
     } else if (cuaca === "hujan") {
