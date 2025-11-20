@@ -1,16 +1,16 @@
 // ===== Respon Mood Lucu =====
-document.getElementById("mood-happy").onclick = function () {
+document.getElementById("mood-happy1").onclick = function () {
     alert("Wah! Kamu spertinya sedang dalam kondisi perfectmu 😏✨ Jaga keseharianmu baik baik ya!");
 };
 
-document.getElementById("mood-normal").onclick = function () {
+document.getElementById("mood-normal1").onclick = function () {
     alert("Oke! jaga baik baik keseharianmu ya😐👍");
 };
 
-document.getElementById("mood-tired").onclick = function () {
+document.getElementById("mood-tired1").onclick = function () {
     alert("Lagi capek ya? 😴💤 Jangan lupa istirahat cukup!");
 };
 
-document.getElementById("mood-sick").onclick = function () {
+document.getElementById("mood-sick1").onclick = function () {
     alert("Aduh, mending kamu istirahat dulu atau minum obat 🥺");
 };
