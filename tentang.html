@@ -22,8 +22,39 @@
             <div class="mood sick1" id="mood-sick1">sakit 🤕</div>
         </div>
     </section>
-
+    
+    <section class="container">
+    <h1>Cek Aktivitas Harian</h1>
+    <p>Pilih kondisi waktu dan cuaca untuk rekomendasi aktivitas ✨</p>
+    
+    <label>Waktu sekarang:</label>
+    <select id="waktu">
+        <option value="">-- Pilih waktu --</option>
+        <option value="pagi">Pagi 🌤️</option>
+        <option value="siang">Siang ☀️</option>
+        <option value="sore">Sore 🌆</option>
+        <option value="malam">Malam 🌙</option>
+    </select>
+    
+    <br><br>
+    
+    <label>Cuaca:</label>
+    <select id="cuaca">
+        <option value="">-- Pilih cuaca --</option>
+        <option value="cerah">Cerah 😎</option>
+        <option value="mendung">Mendung ☁️</option>
+        <option value="hujan">Hujan 🌧️</option>
+        <option value="panas">Panas 🔥</option>
+    </select>
+    
+    <br><br>
+    
+    <button id="cek-aktivitas" class="mood normal1">Cek Aktivitas 🎯</button>
+    
+    <p id="hasil-aktivitas" style="margin-top:20px; font-size:18px; font-weight:600;"></p>
+    </section>
+    
     <script src="tentang.js"></script>
-
+    
 </body>
 </html>
