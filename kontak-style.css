@@ -77,17 +77,6 @@ label {
     display: block;
 }
 
-
-input, select {
-    width: 100%;
-    padding: 12px;
-    border-radius: 12px;
-    border: 2px solid #d0eaff;
-    margin-top: 8px;
-    outline: none;
-    font-size: 15px;
-}
-
 /* Tombol */
 button {
     width: 100%;
