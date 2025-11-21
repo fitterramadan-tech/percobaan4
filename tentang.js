@@ -54,6 +54,12 @@ document.getElementById("cek-aktivitas").onclick = function () {
         rekomendasi = "Minum-minuman hangat, ☕📖";
     } else if (waktu === "malam" && cuaca === "cerah") {
         rekomendasi = "Waktu yang pas buat istirahat atau menonton film favoritmu 🎬🌙";
+    } else if (waktu === "malam" && cuaca === "panas") {
+        rekomendasi = "Mana ada bro 🗿🗿";
+    } else if (waktu === "malam" && cuaca === "mendung") {
+        rekomendasi = "Tido pun soedap nih👍🌙";
+    } else if (waktu === "malam" && cuaca === "hujan😌🌧️") {
+        rekomendasi = "Tido pun makin soedap nih";
     } else if (cuaca === "hujan") {
         rekomendasi = "Karena hujan lebih baik di rumah saja, dengarkan musik atau tidur 😌🌧️";
     } else {
